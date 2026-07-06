@@ -19,7 +19,7 @@ void divisors(int n)
             }
         }
     }
-    sort(v.begin(), v.end());
+    sort(v.rbegin(), v.rend());
     cout << endl;
 }
 
