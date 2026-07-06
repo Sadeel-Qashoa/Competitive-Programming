@@ -32,17 +32,39 @@ bool prime(int n)
     }
     return true;
 }
+
+map<int, int> mp;
+
+void prime_factors(int n)
+{//sqr(t)
+    for (int i = 2; i * i <= n; i++)
+    {
+        while (n % i == 0)
+        {
+            mp[i]++;
+            n /= i;
+        }
+    }
+    if (n>1) mp[n]=1;
+}
+
 void solve()
 {
-
+    int n;
+    cin >> n;
+    prime_factors(n);
+    for (auto p : mp)
+    {
+        cout<< p.first << " " << p.second << endl;
+    }
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;
-    cin >> t;
+    int t = 1;
+    // cin >> t;
     while (t--)
     {
         solve();
