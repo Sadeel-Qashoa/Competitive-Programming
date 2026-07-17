@@ -3,34 +3,40 @@ using namespace std;
 #define ll long long
 // The Great Eng : Sadeel Qashoa
 void solve1() // O(n)
-{ // Naive Solution
+{
+    // Naive Solution
     int n;
     cin >> n;
-    for (int i=1 ; i<=n ; i++)
+    for (int i = 1; i <= n; i++)
     {
-        if (n%i == 0)
+        if (n % i == 0)
         {
             cout << i << " ";
         }
     }
     cout << endl;
 }
+
+vector<ll> v;
+
 void solve() //sqrt(n)
 {
-ll n; cin >> n;
-    for (int i= 1; i*i <=n ; i++)
+    ll n;
+    cin >> n;
+    for (int i = 1; i * i <= n; i++)
     {
-        if (n%i == 0)
+        if (n % i == 0)
         {
-            cout << i << " " ;
-            if (n/i != i)
+            v.push_back(i);
+            if (n / i != i)
             {
-                cout << n/i << " ";
+                v.push_back(n / i);
             }
         }
     }
     cout << endl;
 }
+
 int main()
 {
     ios_base::sync_with_stdio(false);
