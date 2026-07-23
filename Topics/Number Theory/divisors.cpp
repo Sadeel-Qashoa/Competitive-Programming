@@ -23,7 +23,7 @@ void solve() //sqrt(n)
 {
     ll n;
     cin >> n;
-    for (int i = 1; i * i <= n; i++)
+    for (ll i = 1; i * i <= n; i++)
     {
         if (n % i == 0)
         {
