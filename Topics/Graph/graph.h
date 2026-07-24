@@ -1,0 +1,14 @@
+//
+// Created by Qashoo on 23/07/2026.
+//
+
+#ifndef COMPETITIVE_PROGRAMMING_GRAPH_H
+#define COMPETITIVE_PROGRAMMING_GRAPH_H
+
+
+class graph
+{
+};
+
+
+#endif //COMPETITIVE_PROGRAMMING_GRAPH_H
