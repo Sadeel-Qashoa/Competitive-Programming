@@ -2,10 +2,12 @@
 using namespace std;
 #define ll long long
 // The Great Eng : Sadeel Qashoa
+
 void solve()
 {
 
 }
+
 int main()
 {
     ios_base::sync_with_stdio(false);
