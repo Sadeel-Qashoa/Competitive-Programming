@@ -5,20 +5,9 @@ using namespace std;
 
 void solve()
 {
-    ll n, k;
-    cin >> n >> k;
-    while (k--)
-    {
-        if (n % 10 != 0)
-        {
-            n--;
-        }
-        else
-        {
-            n /= 10;
-        }
-    }
-    cout << n << endl;
+    ll n;
+    cin >> n;
+    cout << n / 2 << endl;
 }
 
 int main()
@@ -26,7 +15,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int t = 1;
-    //cin >> t;
+    cin >> t;
     while (t--)
     {
         solve();

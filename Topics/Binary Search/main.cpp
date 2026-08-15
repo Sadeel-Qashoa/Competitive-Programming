@@ -2,23 +2,20 @@
 using namespace std;
 #define ll long long
 // The Great Eng : Sadeel Qashoa
-
 void solve()
 {
-    ll n, k;
-    cin >> n >> k;
-    while (k--)
+    ll n;
+    cin >> n;
+    ll cnt = 0;
+    int x;
+    while (n != 0)
     {
-        if (n % 10 != 0)
-        {
-            n--;
-        }
-        else
-        {
-            n /= 10;
-        }
+        x = n % 10;
+        if (x == 4 || x == 7) cnt++;
+        n /= 10;
     }
-    cout << n << endl;
+    if (cnt % 10 == 4 || cnt % 10 == 7) cout << "YES" << endl;
+    else cout << "NO" << endl;
 }
 
 int main()

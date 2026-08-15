@@ -1,0 +1,14 @@
+//
+// Created by Qashoo on 10/08/2026.
+//
+
+#ifndef COMPETITIVE_PROGRAMMING_CHATORDER_H
+#define COMPETITIVE_PROGRAMMING_CHATORDER_H
+
+
+class ChatOrder
+{
+};
+
+
+#endif //COMPETITIVE_PROGRAMMING_CHATORDER_H
