@@ -5,6 +5,23 @@ using namespace std;
 
 void solve()
 {
+    string s, t;
+    cin >> s >> t;
+    if (s.length() != t.length())
+    {
+        cout << "NO\n";
+        return;
+    }
+    ll n = s.length();
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] != t[n - i - 1])
+        {
+            cout << "NO" << '\n';
+            return;
+        }
+    }
+    cout << "YES" << '\n';
 
 }
 
