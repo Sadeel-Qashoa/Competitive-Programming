@@ -2,20 +2,38 @@
 using namespace std;
 #define ll long long
 // The Great Eng : Sadeel Qashoa
+//O(log n)
 void solve()
 {
     ll n;
     cin >> n;
-    ll cnt = 0;
-    int x;
-    while (n != 0)
+    vector<ll> a(n);
+    for (ll i = 0; i < n; i++)
     {
-        x = n % 10;
-        if (x == 4 || x == 7) cnt++;
-        n /= 10;
+        cin >> a[i];
     }
-    if (cnt % 10 == 4 || cnt % 10 == 7) cout << "YES" << endl;
-    else cout << "NO" << endl;
+    sort(a.begin(), a.end());
+    int x;
+    cin >> x;
+    int l=0,r=n-1,ans=-1;
+    while (l<=r)
+    {
+        int m = (l+r)/2;
+        if (a[m]==x)
+        {
+            ans = m;
+            break;;
+        }
+        if (a[m]<x)
+        {
+            l=m+1;
+        }
+        else if (a[m]>x)
+        {
+            r=m-1;
+        }
+    }
+    cout << ans << endl;
 }
 
 int main()

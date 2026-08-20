@@ -3,6 +3,7 @@ using namespace std;
 #define ll long long
 // The Great Eng : Sadeel Qashoa
 // سؤال بده يشوف عدد البلوكات اللازمة
+// لو بنبني هرم
 //  لو بدي طابق بدي 1
 //طابقين 2+ 1
 // 3 طوابق 3 + 3
