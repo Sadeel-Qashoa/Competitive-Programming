@@ -32,6 +32,7 @@ void solve()
 void solve2()
 {
     // best solution
+    //O(n)
     ll n, k;
     cin >> n >> k;
     vector<ll> arr(n);
