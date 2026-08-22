@@ -7,20 +7,19 @@ void solve()
     ll n;
     cin >> n;
     vector<ll> a(n);
-    cin>>a[0];
-    for (ll i = 1; i < n; i++)
-    {
-        cin >> a[i];
-        a[i] += a[i - 1];
-    }
     ll m;
     cin >> m;
+    for (ll i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    sort(a.begin(), a.end());
     ll x;
     while (m--)
     {
         cin >> x;
-        ll indx = lower_bound(a.begin(), a.end(), x) - a.begin();
-        cout << indx+1 << endl;
+        ll indx = upper_bound(a.begin(), a.end(), x) - a.begin();
+        cout << indx << " ";
     }
 }
 
@@ -36,3 +35,4 @@ int main()
     }
     return 0;
 }
+
