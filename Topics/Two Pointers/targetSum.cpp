@@ -36,7 +36,7 @@ void solve()
             l++;
         }
     }
-    cout<<"Impossible"<<endl;
+    cout<<-1<<endl;
 }
 
 int main()
