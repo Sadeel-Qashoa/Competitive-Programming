@@ -21,7 +21,6 @@ void solve()
             for (ll j=i-1; j>=0; j--)
             {
                 num *= 10;
-
                 if (mask & (1LL << j))
                     num += 7;
                 else
