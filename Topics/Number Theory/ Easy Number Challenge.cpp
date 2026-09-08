@@ -6,14 +6,14 @@ const ll MOD = 1073741824;
 vector<ll> divisors(ll n)
 {
     vector<ll> v;
-    for (int i= 1; i*i <=n ; i++)
+    for (ll i = 1; i*i <= n; i++)
     {
-        if (n%i == 0)
+        if (n % i == 0)
         {
             v.push_back(i);
-            if (n/i != i)
+            if (n / i != i)
             {
-                v.push_back(n/i);
+                v.push_back(n / i);
             }
         }
     }
@@ -29,21 +29,21 @@ void solve()
     cin >> a >> b >> c;
     ll ans =0;
     map<ll, ll> mp;
-    for (int i = 1; i <= a; i++)
+    for (ll i = 1; i <= a; i++)
     {
-        for (int j = 1; j <= b; j++)
+        for (ll j = 1; j <= b; j++)
         {
-            for (int k = 1; k <= c; k++)
+            for (ll k = 1; k <= c; k++)
             {
-                ll x = i * j * k ;
+                ll x=i*j*k;
                 if (mp.count(x)==1)
                 {
-                    ans= mod(ans,mp[x]);
+                    ans=mod(ans,mp[x]);
                 }
                 else
                 {
-                   vector<ll> v= divisors(x);
-                    ans=mod(ans,v.size());
+                    vector<ll> v=divisors(x);
+                    ans =mod(ans,v.size());
                     mp[x]=v.size();
                 }
             }
